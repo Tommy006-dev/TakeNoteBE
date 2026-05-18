@@ -70,3 +70,9 @@ Route::post('/email/verify-api', function (Request $request) {
 
     return response()->json(['success' => true, 'message' => 'Xác thực tài khoản thành công!']);
 })->name('verification.verify'); 
+Route::get('/clear-cache', function () {
+    \Illuminate\Support\Facades\Artisan::call('config:clear');
+    \Illuminate\Support\Facades\Artisan::call('cache:clear');
+    \Illuminate\Support\Facades\Artisan::call('route:clear');
+    return response()->json(['message' => 'Đã dọn sạch toàn bộ Cache thành công!']);
+});
