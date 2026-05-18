@@ -3,9 +3,9 @@
 return [
 
     /*
-    |
+    |--------------------------------------------------------------------------
     | Cross-Origin Resource Sharing (CORS) Configuration
-    |
+    |--------------------------------------------------------------------------
     |
     | Here you may configure your settings for cross-origin resource sharing
     | or "CORS". This determines what cross-origin operations may execute
@@ -19,7 +19,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*'],
+    'allowed_origins' => ['https://note-management-frontend-jp0n.onrender.com'],
 
     'allowed_origins_patterns' => [],
 
@@ -29,6 +29,6 @@ return [
 
     'max_age' => 0,
 
-    'supports_credentials' => false,
+    'supports_credentials' => true,
 
 ];
